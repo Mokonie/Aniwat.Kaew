@@ -6,4 +6,5 @@ xlsxwriter
 kaleido
 wordcloud
 matplotlib
+numpy
 
