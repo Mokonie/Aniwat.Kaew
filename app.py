@@ -1,4 +1,4 @@
-# app.py (เวอร์ชันสมบูรณ์ที่สุด ณ ปัจจุบัน - เพิ่ม Sort & Search ใน Heatmap)
+# app.py (เวอร์ชันสมบูรณ์ที่สุด - เพิ่ม Credit ผู้สร้าง)
 
 import streamlit as st
 import pandas as pd
@@ -11,7 +11,7 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 
-# --- ส่วนที่ 1: ฟังก์ชัน ---
+# --- ส่วนที่ 1: ฟังก์ชัน (ไม่เปลี่ยนแปลง) ---
 def clean_compound_name(name):
     """
     ทำความสะอาดชื่อสารประกอบ: ลบเครื่องหมายคำพูด, ช่องว่าง, ตัวเลข/สัญลักษณ์ที่ไม่ใช่ชื่อสาร, และปรับรูปแบบตัวพิมพ์
@@ -20,27 +20,21 @@ def clean_compound_name(name):
         return None
     cleaned_name = name.strip().strip('"')
     
-    # ลบตัวเลขหรือสัญลักษณ์นำหน้า/ต่อท้ายที่ไม่ใช่ส่วนหนึ่งของชื่อสารจริงๆ
-    # เช่น "1-Butanol" -> "Butanol" หรือ "(+)-2-Bornanone" -> "Bornanone"
-    cleaned_name = re.sub(r'^\d+[\s\-\.]*', '', cleaned_name) # ลบตัวเลขนำหน้า
-    cleaned_name = re.sub(r'^\([\+\-]\d?\)[\s\-\.]*', '', cleaned_name) # ลบ (+)-2- นำหน้า
-    cleaned_name = re.sub(r'[\s\-\.]*\(\d?\)$', '', cleaned_name) # ลบ (-2) ท้าย
-    cleaned_name = re.sub(r'[\s\-\.]*\[\d?\].*$', '', cleaned_name) # ลบ [2.2.1]
-    
-    # ลบตัวเลขที่อยู่โดดๆ หรือตัวอักษรเดียวที่ไม่ใช่ส่วนหนึ่งของคำ
-    cleaned_name = re.sub(r'\b\d+\b', '', cleaned_name) # ลบตัวเลขโดดๆ
-    cleaned_name = re.sub(r'\b[A-Z]\b', '', cleaned_name) # ลบตัวอักษรเดี่ยว (อาจต้องระวังถ้ามีสารชื่อย่อ)
+    cleaned_name = re.sub(r'^\d+[\s\-\.]*', '', cleaned_name)
+    cleaned_name = re.sub(r'^\([\+\-]\d?\)[\s\-\.]*', '', cleaned_name)
+    cleaned_name = re.sub(r'[\s\-\.]*\(\d?\)$', '', cleaned_name)
+    cleaned_name = re.sub(r'[\s\-\.]*\[\d?\].*$', '', cleaned_name)
+    cleaned_name = re.sub(r'\b\d+\b', '', cleaned_name)
+    cleaned_name = re.sub(r'\b[A-Z]\b', '', cleaned_name)
 
-    cleaned_name = cleaned_name.strip() # ลบช่องว่างที่อาจเกิดขึ้นจากการลบ
+    cleaned_name = cleaned_name.strip()
     
     if not cleaned_name:
         return None
     
-    # ตรวจสอบว่ามีตัวอักษรอย่างน้อย 3 ตัวหรือไม่ (เพื่อกรองพวก "1", "2", "3" ที่อาจหลุดมา)
     if not re.search(r'[a-zA-Z]{3,}', cleaned_name):
         return None
     
-    # ปรับรูปแบบตัวพิมพ์ให้เป็น Title Case หากเดิมเป็นตัวพิมพ์ใหญ่ทั้งหมด
     if cleaned_name.isupper():
         cleaned_name = cleaned_name.title()
     
@@ -65,36 +59,33 @@ def parse_report_file(uploaded_file):
                 library_search_header_index = i
 
         if peak_list_header_index == -1:
-            return None # ไม่พบส่วน Peak List
+            return None
 
-        # --- อ่านส่วน Peak List ---
         header1 = [name.strip('"') for name in lines[peak_list_header_index].split(',')]
         data_rows1 = []
         
-        # กำหนดจุดสิ้นสุดของ Peak List
         end_index1 = library_search_header_index if library_search_header_index != -1 else len(lines)
         
         for i in range(peak_list_header_index + 1, end_index1):
             parts = [p.strip() for p in lines[i].split(',')]
-            if len(parts) > 1 and parts[0].isdigit(): # ตรวจสอบว่าเป็นแถวข้อมูลจริง
+            if len(parts) > 1 and parts[0].isdigit():
                 data_rows1.append(parts)
         
         if not data_rows1:
-            return None # ไม่มีข้อมูลใน Peak List
+            return None
 
         df_peaks = pd.DataFrame(data_rows1)
         num_cols = min(len(df_peaks.columns), len(header1))
         df_peaks = df_peaks.iloc[:, :num_cols]
         df_peaks.columns = header1[:num_cols]
 
-        # --- อ่านส่วน Library Search (ถ้ามี) ---
         df_library = None
         if library_search_header_index != -1:
             header2 = [name.strip('"') for name in lines[library_search_header_index].split(',')]
             data_rows2 = []
             for i in range(library_search_header_index + 1, len(lines)):
                 parts = [p.strip() for p in lines[i].split(',')]
-                if len(parts) > 1 and parts[0].isdigit(): # ตรวจสอบว่าเป็นแถวข้อมูลจริง
+                if len(parts) > 1 and parts[0].isdigit():
                     data_rows2.append(parts)
             
             if data_rows2:
@@ -103,18 +94,15 @@ def parse_report_file(uploaded_file):
                 df_library = df_library.iloc[:, :num_cols_lib]
                 df_library.columns = header2[:num_cols_lib]
 
-        # --- แปลงข้อมูลเป็นตัวเลข ---
         cols_to_convert = ["Peak", "R.T.", "Height", "Area", "Pct Max", "Pct Total"]
         for col in cols_to_convert:
             if col in df_peaks.columns:
                 df_peaks[col] = pd.to_numeric(df_peaks[col], errors='coerce')
-        df_peaks.dropna(subset=['Peak', 'R.T.'], inplace=True) # ลบแถวที่ไม่มี Peak หรือ R.T.
+        df_peaks.dropna(subset=['Peak', 'R.T.'], inplace=True)
 
-        # --- รวมข้อมูล Peak List และ Library Search ---
         if df_library is not None and 'PK' in df_library.columns:
             df_library['PK'] = pd.to_numeric(df_library['PK'], errors='coerce')
             df_merged = pd.merge(df_peaks, df_library.rename(columns={'PK': 'Peak'}), on='Peak', how='left')
-            # ใช้ .loc เพื่อหลีกเลี่ยง SettingWithCopyWarning
             df_merged.loc[df_merged['Library/ID'].isna(), 'Library/ID'] = 'Unknown'
         else:
             df_merged = df_peaks.copy()
@@ -131,7 +119,6 @@ def to_excel(df):
     """
     output = io.BytesIO()
     with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
-        # ใช้ index=False ถ้าไม่ต้องการให้มีคอลัมน์ Index ใน Excel
         df.to_excel(writer, index=False, sheet_name='Data') 
     processed_data = output.getvalue()
     return processed_data
@@ -139,6 +126,11 @@ def to_excel(df):
 # --- ส่วนที่ 2: การสร้าง UI และจัดการสถานะ ---
 st.set_page_config(layout="wide")
 st.title("Multi-Sample GC-MS Data Comparator")
+
+# === จุดแก้ไข: เพิ่ม Credit ที่นี่ (เวอร์ชันใหม่) ===
+st.markdown('<p style="color:green; font-weight:bold;">Created by Aniwat Kaewkrod</p>', unsafe_allow_html=True)
+# ===============================================
+
 st.write("อัปโหลดไฟล์ Report หลายไฟล์ (สูงสุด 20 ไฟล์) เพื่อเปรียบเทียบข้อมูล")
 
 # การจัดการ Session State เพื่อคงสถานะของแอป
@@ -150,7 +142,7 @@ if 'uploaded_files_list' not in st.session_state:
 st.sidebar.header("File Upload")
 uploaded_files = st.sidebar.file_uploader(
     "อัปโหลดไฟล์ Report ของคุณ",
-    type=None, # อนุญาตให้อัปโหลดไฟล์ทุกประเภท (แต่เราจะประมวลผลแค่ text)
+    type=None,
     accept_multiple_files=True,
     key="file_uploader"
 )
@@ -160,13 +152,11 @@ col1, col2 = st.sidebar.columns(2)
 analyze_button = col1.button("🚀 Analyze", use_container_width=True, type="primary")
 clear_button = col2.button("🗑️ Clear Data", use_container_width=True)
 
-# ปุ่ม Clear Data
 if clear_button:
     st.session_state.analysis_complete = False
     st.session_state.uploaded_files_list = []
-    st.rerun() # รีโหลดแอปเพื่อล้างข้อมูลทั้งหมด
+    st.rerun()
 
-# ปุ่ม Analyze
 if analyze_button and uploaded_files:
     if len(uploaded_files) > 20:
         st.error("ขออภัย, สามารถเปรียบเทียบได้สูงสุดครั้งละ 20 ไฟล์เท่านั้น")
@@ -193,17 +183,14 @@ if st.session_state.analysis_complete and st.session_state.uploaded_files_list:
     if not valid_data_list:
         st.error("ไม่สามารถประมวลผลไฟล์ใดๆ ได้เลย กรุณาตรวจสอบรูปแบบไฟล์")
         st.session_state.analysis_complete = False
-        st.stop() # หยุดการทำงานของสคริปต์ถ้าไม่มีข้อมูลที่ถูกต้อง
+        st.stop()
 
-    # รวมข้อมูลจากทุกไฟล์ที่ประมวลผลได้
     combined_df = pd.concat(valid_data_list, ignore_index=True)
     
-    # ทำความสะอาดชื่อสารประกอบและกรองสารที่ไม่ระบุชื่อ
     combined_df['Compound'] = combined_df['Library/ID'].apply(clean_compound_name)
     base_analysis_df = combined_df.dropna(subset=['Compound'])
     base_analysis_df = base_analysis_df[base_analysis_df['Compound'] != 'Unknown']
 
-    # --- การสร้าง Tabs ---
     tab_heatmap, tab_pca, tab_overlay, tab_data = st.tabs([
         "🔥 Comparative Heatmap", 
         "🧬 PCA Clustering", 
@@ -215,7 +202,6 @@ if st.session_state.analysis_complete and st.session_state.uploaded_files_list:
         st.header("เปรียบเทียบปริมาณสารระหว่างตัวอย่าง (Heatmap)")
         st.subheader("Display Options")
         
-        # จัด Layout ของ Options
         opt_col1, opt_col2, opt_col3, opt_col4 = st.columns(4)
         with opt_col1:
             value_option = st.selectbox("เลือกค่าที่จะแสดง:", ("Area", "Height"), key="heatmap_value")
@@ -230,7 +216,6 @@ if st.session_state.analysis_complete and st.session_state.uploaded_files_list:
         with opt_col4:
             use_log_scale = st.checkbox("ใช้สเกลสีแบบ Log", value=False, key="log_scale_check")
 
-        # === จุดแก้ไขใหม่: เพิ่ม Search Bar และ Sort Option ===
         st.markdown("---")
         st.subheader("Filter & Sort Compounds")
         search_term = st.text_input("ค้นหาสารประกอบ (Compound Search):", "").strip().lower()
@@ -239,9 +224,7 @@ if st.session_state.analysis_complete and st.session_state.uploaded_files_list:
             ("Alphabetical (A-Z)", "Total Abundance (Highest First)", "Variance (Highest First)"),
             key="compound_sort_option"
         )
-        # ====================================================
 
-        # รายชื่อสารปนเปื้อน Siloxanes
         CONTAMINANT_KEYWORDS = [
             'cyclosiloxane', 'cyclotrisiloxane', 'cyclopentasiloxane', 
             'cyclotetrasiloxane', 'cyclohexasiloxane', 'cyclododecasiloxane'
@@ -252,33 +235,27 @@ if st.session_state.analysis_complete and st.session_state.uploaded_files_list:
         if filter_contaminants:
             heatmap_df = heatmap_df[~heatmap_df['Compound'].str.contains(contaminant_pattern, case=False, regex=True, flags=re.IGNORECASE)]
 
-        # === จุดแก้ไขใหม่: กรองตาม Search Term ===
         if search_term:
             heatmap_df = heatmap_df[heatmap_df['Compound'].str.lower().str.contains(search_term, na=False)]
-        # =========================================
 
         if not heatmap_df.empty:
             try:
-                # สร้าง Pivot Table สำหรับ Heatmap
                 heatmap_pivot = heatmap_df.pivot_table(
                     index='Compound', columns='Sample', values=value_option,
                     aggfunc='sum'
                 ).fillna(0)
                 
-                # กรองสารที่ไม่มีค่าเลยในทุกตัวอย่าง
                 heatmap_pivot = heatmap_pivot[heatmap_pivot.sum(axis=1) > 0]
                 
                 if not heatmap_pivot.empty:
-                    # === จุดแก้ไขใหม่: เรียงลำดับสารประกอบ ===
                     if sort_option == "Total Abundance (Highest First)":
                         heatmap_pivot['__sort_col__'] = heatmap_pivot.sum(axis=1)
                         heatmap_pivot = heatmap_pivot.sort_values(by='__sort_col__', ascending=False).drop(columns='__sort_col__')
                     elif sort_option == "Variance (Highest First)":
                         heatmap_pivot['__sort_col__'] = heatmap_pivot.var(axis=1)
                         heatmap_pivot = heatmap_pivot.sort_values(by='__sort_col__', ascending=False).drop(columns='__sort_col__')
-                    else: # Alphabetical (A-Z)
+                    else:
                         heatmap_pivot = heatmap_pivot.sort_index(ascending=True)
-                    # =========================================
 
                     plot_data = heatmap_pivot.copy()
                     color_axis_label = f"{value_option}"
@@ -288,7 +265,7 @@ if st.session_state.analysis_complete and st.session_state.uploaded_files_list:
                         color_axis_label = f"Log({value_option})"
 
                     num_compounds = len(plot_data.index)
-                    graph_height = max(500, num_compounds * 22) # ปรับความสูงตามจำนวนสาร
+                    graph_height = max(500, num_compounds * 22)
 
                     fig_heatmap = px.imshow(
                         plot_data,
@@ -303,7 +280,7 @@ if st.session_state.analysis_complete and st.session_state.uploaded_files_list:
                             tickmode='linear', 
                             automargin=True,
                             title_text="Compound (สาร)",
-                            dtick=1 # บังคับให้แสดงทุก tick (ชื่อสาร)
+                            dtick=1
                         ),
                         xaxis=dict(
                             title_text="Sample (ไฟล์)"
@@ -350,12 +327,10 @@ if st.session_state.analysis_complete and st.session_state.uploaded_files_list:
         else:
             st.warning("ไม่พบสารที่ระบุชื่อได้ในไฟล์ที่อัปโหลดเพื่อนำมาสร้าง Heatmap")
 
-    # --- โค้ดสำหรับแท็บ PCA Clustering ---
     with tab_pca:
         st.header("การจัดกลุ่มตัวอย่าง (PCA Clustering)")
         st.info("แสดงความคล้ายคลึงกันของโปรไฟล์สารเคมีระหว่างตัวอย่างทั้งหมด ตัวอย่างที่อยู่ใกล้กันหมายถึงมีโปรไฟล์คล้ายกัน")
 
-        # --- ส่วน UI สำหรับตั้งค่าการวิเคราะห์ ---
         pca_col1, pca_col2 = st.columns(2)
         pca_value_option = pca_col1.selectbox("เลือกค่าที่จะใช้คำนวณ:", ("Area", "Height"), key="pca_value")
         use_groups = pca_col2.toggle("กำหนดกลุ่มเพื่อใส่สี", value=False)
@@ -382,26 +357,20 @@ if st.session_state.analysis_complete and st.session_state.uploaded_files_list:
                         group_map[member] = group_name
                         selected_samples_in_groups.add(member)
 
-        # --- เริ่มการคำนวณ PCA ---
         if len(base_analysis_df['Sample'].unique()) < 2:
             st.warning("ต้องมีตัวอย่างอย่างน้อย 2 ไฟล์เพื่อทำการวิเคราะห์ PCA")
         else:
             try:
-                # 1. สร้าง Pivot table (Compounds x Samples)
                 pivot_df = base_analysis_df.pivot_table(index='Compound', columns='Sample', values=pca_value_option, aggfunc='sum').fillna(0)
                 
-                # 2. Transpose ข้อมูลให้เป็น (Samples x Compounds)
                 data_for_pca = pivot_df.T
                 
-                # 3. Scale ข้อมูล (สำคัญมาก!)
                 scaler = StandardScaler()
                 scaled_data = scaler.fit_transform(data_for_pca)
                 
-                # 4. ทำ PCA
                 pca = PCA(n_components=2)
                 principal_components = pca.fit_transform(scaled_data)
                 
-                # 5. สร้าง DataFrame ผลลัพธ์
                 pca_df = pd.DataFrame(data=principal_components, columns=['PC1', 'PC2'], index=data_for_pca.index)
                 
                 if use_groups and group_map:
@@ -411,7 +380,6 @@ if st.session_state.analysis_complete and st.session_state.uploaded_files_list:
                 
                 explained_variance = pca.explained_variance_ratio_
 
-                # 6. สร้าง Scatter Plot
                 st.subheader("PCA Scatter Plot")
                 fig_pca = px.scatter(
                     pca_df,
@@ -452,7 +420,6 @@ if st.session_state.analysis_complete and st.session_state.uploaded_files_list:
             except Exception as e:
                 st.error(f"เกิดข้อผิดพลาดในการคำนวณ PCA: {e}")
 
-    # --- โค้ดในแท็บ Overlaid Chromatograms ---
     with tab_overlay:
         st.header("เปรียบเทียบโปรไฟล์โครมาโทแกรม")
         y_overlay_option = st.selectbox("เลือกค่าสำหรับแกน Y:", ("Height", "Area"), key="overlay_y")
@@ -486,7 +453,6 @@ if st.session_state.analysis_complete and st.session_state.uploaded_files_list:
         - **ประโยชน์:** ช่วยให้เห็นภาพรวมของการเปลี่ยนแปลงโปรไฟล์โครมาโทแกรมระหว่างตัวอย่างได้อย่างรวดเร็ว
         """)
 
-    # --- โค้ดในแท็บ Combined Data ---
     with tab_data:
         st.header("ข้อมูลทั้งหมดที่รวมกัน")
         st.dataframe(combined_df)
