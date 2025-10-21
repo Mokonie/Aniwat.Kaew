@@ -3,5 +3,4 @@ pandas
 plotly
 scikit-learn
 xlsxwriter
-kaleido
 numpy

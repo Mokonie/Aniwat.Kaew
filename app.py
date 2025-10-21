@@ -528,22 +528,16 @@ if st.session_state.analysis_complete and st.session_state.uploaded_files_list:
                     exp_col1, exp_col2 = st.columns(2)
                     
                     with exp_col1:
-                        try:
-                            img_bytes = fig_heatmap.to_image(
-                                format="jpeg", 
-                                width=1400, 
-                                height=graph_height, 
-                                scale=2
-                            )
-                            st.download_button(
-                                "📥 Download Heatmap (JPG)", 
-                                img_bytes, 
-                                "heatmap.jpg", 
-                                "image/jpeg",
-                                use_container_width=True
-                            )
-                        except Exception as e:
-                            st.error(f"ไม่สามารถ Export รูปภาพได้: {e}")
+                        # Export เป็น HTML แทน JPG (ไม่ต้องใช้ Kaleido)
+                        html_bytes = fig_heatmap.to_html(include_plotlyjs='cdn').encode()
+                        st.download_button(
+                            "📥 Download Heatmap (HTML)", 
+                            html_bytes, 
+                            "heatmap.html", 
+                            "text/html",
+                            use_container_width=True,
+                            help="ดาวน์โหลดเป็นไฟล์ HTML แบบ Interactive (เปิดด้วย Browser)"
+                        )
                     
                     with exp_col2:
                         st.download_button(
