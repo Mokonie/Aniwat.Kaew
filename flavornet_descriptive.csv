@@ -1,0 +1,739 @@
+Compound_Name,CAS_Number,Flavor_Description,Source
+trimethylamine,75-50-3,fish,Flavornet
+ethanal,75-07-0,"pungent, ether",Flavornet
+methanethiol,74-93-1,"sulfur, gasoline, garlic",Flavornet
+propanal,123-38-6,"solvent, pungent",Flavornet
+pentane,109-66-0,alkane,Flavornet
+propanol,71-23-8,"alcohol, pungent",Flavornet
+dimethyl sulfide,75-18-3,"cabbage, sulfur, gasoline",Flavornet
+ethyl formate,109-94-4,pungent,Flavornet
+methyl ethyl ketone,78-93-3,ether,Flavornet
+methyl ethyl sulfide,624-89-5,"sulfur, garlic",Flavornet
+hexane,110-54-3,alkane,Flavornet
+ethyl acetate,141-78-6,pineapple,Flavornet
+methylbutenol,115-18-4,herb,Flavornet
+pentanone,96-22-0,ether,Flavornet
+isobutanol,78-83-1,"wine, solvent, bitter",Flavornet
+trans-crotonaldehyde,123-73-9,flower,Flavornet
+methylpentanone,565-69-5,mint,Flavornet
+methylbutanal,96-17-3,"cocoa, almond",Flavornet
+methylbutanal,590-86-3,malt,Flavornet
+pyrrolidine,123-75-1,alkaline,Flavornet
+ethanol,64-17-5,sweet,Flavornet
+thiophene,110-02-1,garlic,Flavornet
+propanoic acid,79-09-4,"pungent, rancid, soy",Flavornet
+diacetyl,431-03-8,butter,Flavornet
+methyl methylbutanoate,556-24-1,apple,Flavornet
+butanol,71-36-3,"medicine, fruit",Flavornet
+butanol,78-92-2,wine,Flavornet
+mercaptoacetaldehyde,4124-63-4,cabbage,Flavornet
+butanal,123-72-8,"pungent, green",Flavornet
+pentenone,1629-58-9,"fish, pungent",Flavornet
+methyl methylpropanoate,547-63-7,flower,Flavornet
+methyl thiocyanate,556-64-9,sulfur,Flavornet
+"2,3-pentadione",600-14-6,"cream, butter",Flavornet
+pentenol,616-25-1,"butter, pungent",Flavornet
+butyric acid,107-92-6,"rancid, cheese, sweat",Flavornet
+hexanone,589-38-8,"ether, grape",Flavornet
+"alpha,γ-dimethylallyl alcohol",1569-50-2,"green, vinyl",Flavornet
+ethyl propionate,105-37-3,fruit,Flavornet
+heptane,142-82-5,alkane,Flavornet
+acetoin,513-86-0,"butter, cream",Flavornet
+methyl butanoate,623-42-7,"ether, fruit, sweet",Flavornet
+acetic acid,64-19-7,sour,Flavornet
+diethyl acetal,105-57-7,"fruit, cream",Flavornet
+2-methyl-1-butanol,1565-80-6,malt,Flavornet
+dimethyl disulfide,624-92-0,"onion, cabbage, putrid",Flavornet
+hexanone,591-78-6,ether,Flavornet
+methyl-2-butenal,1115-11-3,"green, fruit",Flavornet
+3-methyl-1-butanol,123-51-3,"whiskey, malt, burnt",Flavornet
+pentanone,107-87-9,"ether, fruit",Flavornet
+pentenal,1576-87-0,"strawberry, fruit, tomato",Flavornet
+2-methyl-1-butanol,137-32-6,"wine, onion",Flavornet
+pentanol,584-02-1,fruit,Flavornet
+fucoserratene,33580-05-1,"green, plastic",Flavornet
+hexenone,1629-60-3,"cooked vegetable, metal",Flavornet
+methylthiophene,554-14-3,sulfur,Flavornet
+pentanol,71-41-0,balsamic,Flavornet
+(Z)-2-penten-1-ol,1576-95-0,"green, plastic, rubber",Flavornet
+epoxylinalool,14049-11-7,flower,Flavornet
+methylpentanol,590-36-3,pungent,Flavornet
+toluene,108-88-3,paint,Flavornet
+isobutyl acetate,110-19-0,"fruit, apple, banana",Flavornet
+methyl-2-butenol,556-82-1,herb,Flavornet
+methyl methylbutyrate,868-57-5,apple,Flavornet
+ethyl isobutyrate,97-62-1,"sweet, rubber",Flavornet
+1-hexenol,4798-44-1,green,Flavornet
+hexanal,66-25-1,"grass, tallow, fat",Flavornet
+4-methyl-3-penten-2-one,141-79-7,"sweet, chemical",Flavornet
+3-hexenal,6789-80-6,"leaf, green",Flavornet
+thiophane,110-01-0,cabbage,Flavornet
+m-xylene,108-38-3,plastic,Flavornet
+hydroxypentanone,3142-66-3,"herb, truffle",Flavornet
+mercaptobutanone,40789-98-8,onion,Flavornet
+isobutyraldehyde,78-84-2,"pungent, malt, green",Flavornet
+ethyl butyrate,105-54-4,apple,Flavornet
+butanediol,513-85-9,"fruit, onion",Flavornet
+pentanal,110-62-3,"almond, malt, pungent",Flavornet
+propyl propanoate,106-36-5,pineapple,Flavornet
+nonenone,5009-32-5,baked,Flavornet
+octane,111-65-9,alkane,Flavornet
+butyl acetate,123-86-4,pear,Flavornet
+furfural,98-01-1,"bread, almond, sweet",Flavornet
+methylbutenthiol,5287-45-6,"amine, smoke",Flavornet
+hydroxypentanone,5704-20-1,"truffle, earth, nut",Flavornet
+azine,110-86-1,rancid,Flavornet
+methyl pyrazine,109-08-0,popcorn,Flavornet
+ethoxypropanol,111-35-3,fruit,Flavornet
+1-(methylthio)ethanethiol,31331-53-0,thiamin,Flavornet
+2-hexenal,6728-26-3,"apple, green",Flavornet
+(E)-2-hexenal,85761-70-2,"green, leaf",Flavornet
+(2S)-2-methyl-ethyl ester-butanoic acid,10307-61-6,apple,Flavornet
+isopropyl butanoate,638-11-9,"pungent, fruit",Flavornet
+furfuryl alcohol,98-00-0,burnt,Flavornet
+ethyl methylbutyrate,7452-79-1,apple,Flavornet
+ethyl 3-methylbutanoate,108-64-5,fruit,Flavornet
+2-hexenal,505-57-7,"fat, rancid",Flavornet
+isovaleric acid,503-74-2,"sweat, acid, rancid",Flavornet
+methylfuranthiol,28588-74-1,meat,Flavornet
+(Z)-3-hexenol,928-96-1,grass,Flavornet
+methylbutanone,563-80-4,camphor,Flavornet
+heptenone,2918-13-0,metal,Flavornet
+methylbutyric acid,116-53-0,"cheese, sweat",Flavornet
+hexanol,111-27-3,"resin, flower, green",Flavornet
+heptanol,589-82-2,herb,Flavornet
+dimethylthiazole,541-58-2,"rubber, mold",Flavornet
+isoamyl acetate,123-92-2,banana,Flavornet
+2-methylbutyl acetate,624-41-9,fruit,Flavornet
+2-hexenol,928-94-9,"leaf, green, wine, fruit",Flavornet
+methional,3268-49-3,cooked potato,Flavornet
+o-picoline,109-06-8,sweat,Flavornet
+"allyl isothiocyanate, allyspol",57-06-7,"sulfur, pungent, garlic",Flavornet
+(E)-2-hexenol,928-95-0,"green, leaf, walnut",Flavornet
+o-xylene,95-47-6,geranium,Flavornet
+heptanone,110-43-0,soap,Flavornet
+mercaptopentanone,67633-97-0,"sulfur, onion, meat",Flavornet
+styrene,100-42-5,"balsamic, gasoline",Flavornet
+acetylfuran,1192-62-7,balsamic,Flavornet
+methyl-2-(methylthio)acetate,16630-66-3,"cooked potato, roasted nut",Flavornet
+propyl butyrate,105-66-8,"pineapple, solvent",Flavornet
+ethyl valerate,539-82-2,"yeast, fruit",Flavornet
+mercaptopentanone,17042-24-9,roasted meat,Flavornet
+methyltetrahydrofuranthiol,26548-78-7,onion,Flavornet
+heptanal,111-71-7,"fat, citrus, rancid",Flavornet
+4-heptenal,6728-31-0,"biscuit, cream",Flavornet
+bornyl methyl ether,10395-54-7,"earth, must",Flavornet
+dimethyl pyrazine,123-32-0,"cocoa, roasted nut, roast beef, medicine",Flavornet
+dimethyl pyrazine,108-50-9,"roasted nut, cocoa, roast beef",Flavornet
+ethyl pyrazine,13925-00-3,"peanut butter, wood",Flavornet
+caproic acid,142-62-1,sweat,Flavornet
+"2,4-hexadienal",80466-34-8,green,Flavornet
+pentanoic acid,109-52-4,sweat,Flavornet
+dimethyl pyrazine,5910-89-4,"nut, peanut butter, cocoa, meat",Flavornet
+4-methylhexanol,818-49-5,sweat,Flavornet
+fufuryl mercaptan,98-02-2,"coffee, roast",Flavornet
+1-cyclohexen-3-one,930-68-7,pesticide,Flavornet
+acetylpyrroline,85213-22-5,"nut, roast",Flavornet
+nonane,111-84-2,alkane,Flavornet
+methoxymethylbutanethiol,94087-83-9,"cat, black currant",Flavornet
+ethyl mercaptopropionate,19788-49-9,sulfur,Flavornet
+dimethylthiazole,3581-91-7,"roast, smoke",Flavornet
+dimethyl sulfone,67-71-0,"sulfur, burnt",Flavornet
+hexanethiol,111-31-9,sulfur,Flavornet
+heptanol,543-49-7,mushroom,Flavornet
+methyl hexanoate,106-70-7,"fruit, fresh, sweet",Flavornet
+methyldihydrofuranthiol,26486-13-5,meat,Flavornet
+methylthiazoline,52558-99-3,garlic,Flavornet
+2-ethylpyridine,100-71-0,grass,Flavornet
+α-pinene,80-56-8,"pine, turpentine",Flavornet
+mercaptomethylpentanone,75832-79-0,black currant,Flavornet
+methyl-p-xylene,95-63-6,plastic,Flavornet
+ethyl 3-hydroxybutanoate,5405-41-4,marshmallow,Flavornet
+butyl isothiocyanate,592-82-5,"sulfur, pungent, green",Flavornet
+α-thujene,2867-05-2,"wood, green, herb",Flavornet
+2-pentanol,6032-29-7,green,Flavornet
+2-hepten-1-al,2463-63-0,green,Flavornet
+heptenal,18829-55-5,"soap, fat, almond",Flavornet
+benzaldehyde,100-52-7,"almond, burnt sugar",Flavornet
+heptanol,111-70-6,"chemical, green",Flavornet
+methionol,505-10-2,"sweet, potato",Flavornet
+octanone,106-68-3,"herb, butter, resin",Flavornet
+dimethyl trisulfide,3658-80-8,"sulfur, fish, cabbage",Flavornet
+3-mercaptothiophene,7774-73-4,cooked meat,Flavornet
+ethyl isohexanoate,25415-67-2,fruit,Flavornet
+dimethylfuranthiol,55764-23-3,meat,Flavornet
+4-methylthio-2-butanone,34047-39-7,fruit,Flavornet
+methyldihydrothiophenone,13679-85-1,"cabbage, onion, must",Flavornet
+filbertone,102322-83-8,"hazelnut, nut",Flavornet
+mercaptomethylbutanol,34300-94-2,meat broth,Flavornet
+octenone,4312-99-6,"mushroom, metal",Flavornet
+(E)-2-penten-1-ol,1576-96-1,mushroom,Flavornet
+camphene,79-92-5,camphor,Flavornet
+octenol,3391-86-4,mushroom,Flavornet
+5-methylfurfural,620-02-0,"almond, caramel, burnt sugar",Flavornet
+phenol,108-95-2,phenol,Flavornet
+methylisohexenyl ketone,110-93-0,"pepper, mushroom, rubber",Flavornet
+octadienone,65767-22-8,"geranium, metal",Flavornet
+sabinene,3387-41-5,"pepper, turpentine, wood",Flavornet
+"1,5-octadien-3-ol",83861-74-9,"earth, herb",Flavornet
+"1,5-octadienone",359794-78-8,"earth, must",Flavornet
+"2,3-dehydro-1,8-cineole",92760-25-3,"mint, lemon",Flavornet
+pentylfuran,3777-69-3,"green bean, butter",Flavornet
+ethylmethyl pyrazine,13360-64-0,"fruit, sweet",Flavornet
+trimethylthiazole,13623-11-5,earth,Flavornet
+2-formylthiophene,98-03-3,sulfur,Flavornet
+octanal,124-13-0,"fat, soap, lemon, green",Flavornet
+octanone,111-13-7,"soap, gasoline",Flavornet
+methyldithiolane,5616-51-3,sulfur,Flavornet
+"2,4-heptadienal",4313-02-4,fried,Flavornet
+trimethyl-pyrazine,14667-55-1,"roast, potato, must",Flavornet
+ethyl hexanoate,123-66-0,"apple peel, fruit",Flavornet
+2-methyl anisole,578-58-5,"warm, flower, walnut",Flavornet
+β-pinene,127-91-3,"pine, resin, turpentine",Flavornet
+2-octanol,123-96-6,"mushroom, fat",Flavornet
+β-carene,554-60-9,orange peel,Flavornet
+hexenyl acetate,3681-71-8,"green, banana",Flavornet
+(+)-α-phellandrene,2243-33-6,dill,Flavornet
+myrcene,123-35-3,"balsamic, must, spice",Flavornet
+ethyl lactate,97-64-3,fruit,Flavornet
+"2,4-heptadienal",4313-03-5,"nut, fat",Flavornet
+octanol,589-98-0,"moss, nut, mushroom",Flavornet
+acetylpyridine,1122-62-9,popcorn,Flavornet
+hexyl acetate,142-92-7,"fruit, herb",Flavornet
+"2,3,4,5-tetrahydroanisole",931-57-7,"herb, spice",Flavornet
+5-(methylthio)-valeronitrile,59121-25-4,"broccoli, cabbage",Flavornet
+methylfurfurylthiol,59303-05-8,"sulfur, roast",Flavornet
+decane,124-18-5,alkane,Flavornet
+"1,4-cineole",470-67-7,spice,Flavornet
+β-cubebene,13744-15-5,"citrus, fruit",Flavornet
+acetylthiazole,24295-03-2,"roast, nut, sulfur",Flavornet
+phenylethanal,122-78-1,"hawthorne, honey, sweet",Flavornet
+mercaptomethylbutyl formate,50746-10-6,"cat, roast",Flavornet
+acetylpyrazine,22047-25-2,roast,Flavornet
+propionylpyrroline,133447-37-7,roast,Flavornet
+α-phellandrene,99-83-2,"turpentine, mint, spice",Flavornet
+Propionylpyrrole,1073-26-3,"roast, popcorn",Flavornet
+"(+)-limonene,",5989-27-5,"citrus, mint",Flavornet
+"1,8-cineole",470-82-6,"mint, sweet",Flavornet
+2-ethylhexanol,104-76-7,"rose, green",Flavornet
+δ-3-carene,13466-78-9,"lemon, resin",Flavornet
+"2-acetyl-1,4,5,6-tetrahydropyridine",25343-57-1,caramel,Flavornet
+methylethylpyrazine,33504-66-4,sweat,Flavornet
+α-terpinene,99-86-5,lemon,Flavornet
+benzylmethyl ether,538-86-3,metal,Flavornet
+(E)-3-hexenol,928-97-2,"moss, fresh",Flavornet
+limonene,138-86-3,"lemon, orange",Flavornet
+ethyl hydroxybutanoate,999-10-0,caramel,Flavornet
+3-octenone,51193-77-2,nut,Flavornet
+isopropyl hexanoate,2311-46-8,fresh,Flavornet
+3-octen-2-one,1669-44-9,"nut, crushed bug",Flavornet
+furaneol™,3658-77-3,caramel,Flavornet
+methyl octanoate,111-11-5,orange,Flavornet
+acetophenone,98-86-2,"must, flower, almond",Flavornet
+p-cymene,99-87-6,"solvent, gasoline, citrus",Flavornet
+"(Z)-ocimene,",3338-55-4,"citrus, herb, flower",Flavornet
+isobutyl thiazole,18640-74-9,"tomato leaf, green",Flavornet
+4-mercapto-4-methyl-2-pentanone,19872-52-7,box tree,Flavornet
+butyl methylbutyrate,15706-73-7,"fruit, cocoa",Flavornet
+norfuraneol,19322-27-1,caramel,Flavornet
+2-acetylpyrrole,1072-83-9,"nut, walnut, bread",Flavornet
+methylethyl pyrazine,15707-23-0,roast,Flavornet
+methyl-thiophenethiol,2527-76-6,medicine,Flavornet
+2-octenal,2548-87-0,"green, nut, fat",Flavornet
+5-isopropyl-2-methylpyrazine,13925-05-8,sweat,Flavornet
+2-octenal,20664-46-4,"green leaf, walnut",Flavornet
+dimethylmethoxyfuranone,4077-47-8,"caramel, sweet, mildew",Flavornet
+β-phellandrene,555-10-2,"mint, terpentine",Flavornet
+ocimene,27400-71-1,herb,Flavornet
+dihydrolinalool,18479-49-7,"wood, citrus, camphor",Flavornet
+6(10)-dihydromyrcenol,18479-58-8,"tart lime, citrus, cologne",Flavornet
+dimethylheptenal,106-72-9,"fruit, green, melon",Flavornet
+α-ocimene,502-99-8,"fruit, wet cloth",Flavornet
+(E)-β-ocimene,3779-61-1,"sweet, herb",Flavornet
+2-octenal,2363-89-5,green,Flavornet
+artemisia ketone,546-49-6,"green, herb",Flavornet
+"2-methoxy-3,6-dimethylpyrazine",19846-22-1,earth,Flavornet
+"p, a -dimethylstyrol",27576-03-0,gasoline,Flavornet
+cis-sabinene hydrate,15537-55-0,balsamic,Flavornet
+guaiacol,90-05-1,"smoke, sweet, medicine",Flavornet
+γ-terpinene,99-85-4,"gasoline, turpentine",Flavornet
+hydroxydimethylcyclopentenone,21835-00-7,caramel,Flavornet
+p-cresol,106-44-5,"medicine, phenol, smoke",Flavornet
+nonenone,24415-26-7,"pungent, mushroom",Flavornet
+ethyldimethylthiazole,38205-61-7,earth,Flavornet
+"2,5-dimethyl-3-ethylpyrazine",13360-65-1,"potato, roast",Flavornet
+dihydromyrcenol,18479-58-8,"tart lime, citrus, cologne",Flavornet
+sotolon,28664-35-9,"cotton candy, spice, maple",Flavornet
+thenylthiol,6258-63-5,sulfur,Flavornet
+methyl benzoate,93-58-3,"prune, lettuce, herb, sweet",Flavornet
+ethyldimethylpyrazine,13925-07-0,potato,Flavornet
+ethyldimethylpyrazine,15707-34-3,"burnt, popcorn",Flavornet
+artemisia alcohol,29887-38-5,herb,Flavornet
+m-cresol,108-39-4,"fecal, plastic",Flavornet
+dimethylethyl pyrazine,13925-07-0,roast,Flavornet
+durene,95-93-2,"rancid, sweet",Flavornet
+maltol,118-71-8,caramel,Flavornet
+(Z)-linalool oxide,5989-33-3,flower,Flavornet
+octanol,111-87-5,"chemical, metal, burnt",Flavornet
+2-pentylthiophene,4861-58-9,"sweet, fruit",Flavornet
+acetylthiophene,88-15-3,sulfur,Flavornet
+pentyl butanoate,540-18-1,banana,Flavornet
+"3,5-octadienone",38284-27-4,"fruit, fat, mushroom",Flavornet
+3-nonenal,31823-43-5,cucumber,Flavornet
+nonanal,124-19-6,"fat, citrus, green",Flavornet
+propyl hexanoate,626-77-7,fruit,Flavornet
+2-phenylethyl alcohol,60-12-8,"honey, spice, rose, lilac",Flavornet
+3-nonenal,109351-28-2,fat,Flavornet
+isopropylmethoxypyrazine,25773-40-4,"pea, earth",Flavornet
+"3,6-nonadienal",21944-83-2,"fat, soap",Flavornet
+ethyl heptylate,106-30-9,fruit,Flavornet
+2-methyl-2-(methyldithio)propanal,67952-60-7,"smoke, fat",Flavornet
+hotrienol,20053-88-7,hyacinth,Flavornet
+linalool,78-70-6,"flower, lavender",Flavornet
+ethenyl-dimethylpyrazine,157615-33-3,earth,Flavornet
+"2,4-octadienal",30361-28-5,"green, seaweed, cucumber",Flavornet
+octenol,18409-17-1,"soap, plastic",Flavornet
+acetylthiazoline,29926-41-8,"roast, popcorn",Flavornet
+δ-terpinene,586-62-9,"pine, plastic",Flavornet
+(E)-linalool oxide,34995-77-2,flower,Flavornet
+(+)-cis-rose oxide,876-17-5,"green, flower",Flavornet
+nonanone,821-55-6,"hot milk, soap, green",Flavornet
+trans-sabinene hydrate,17699-16-0,"wood, balsamic",Flavornet
+(-)-cis-rose oxide,3033-23-6,"sweet, rose",Flavornet
+methyl cinnamate,103-26-4,strawberry,Flavornet
+p-menthatriene,18368-95-1,turpentine,Flavornet
+(methylbutenyl)-methylfuran,15186-51-3,mint,Flavornet
+undecane,1120-21-4,alkane,Flavornet
+α-p-dimethylstyrene,1195-32-0,"citrus, pine",Flavornet
+formylmethyl thiophene,13679-70-4,sulfur,Flavornet
+4-ethyl-6-hepten-3-one,131671-56-2,fish,Flavornet
+"(E)-p-mentha-2,8-dien-1-ol",7212-40-0,"fresh, mint",Flavornet
+pinenol,168564-54-3,"must, dust",Flavornet
+perillen,539-52-6,wood,Flavornet
+menthone,89-80-5,"fresh, green",Flavornet
+octenhydroperoxide,72755-76-1,"metal, mushroom",Flavornet
+"2-acetyl-3,4,5,6-tetrahydropyridine",27300-27-2,caramel,Flavornet
+(E)-rose oxide,5258-11-7,flower,Flavornet
+γ-heptalactone,105-21-5,"nut, fat, fruit",Flavornet
+nerol oxide,1786-08-9,"oil, flower",Flavornet
+limonene oxide,1195-92-2,fruit,Flavornet
+ethyl cyclohexanoate,3289-28-9,fruit,Flavornet
+methyl cyclohexanecarboxylate,4630-82-4,"fruit, ester",Flavornet
+4-mercapto-4-methyl-2-pentanol,31539-84-1,"flower, lemon",Flavornet
+benzyl alcohol,100-51-6,"sweet, flower",Flavornet
+(Z)-limonene oxide,13837-75-7,"fresh, citrus",Flavornet
+3-terpinen-1-ol,586-82-3,must,Flavornet
+2-nonenal,60784-31-8,"orris, fat, cucumber",Flavornet
+(E)-limonene oxide,4959-35-7,"fresh, citrus",Flavornet
+(+)-(E)-limonene oxide,6909-30-4,green,Flavornet
+camphor,76-22-2,camphor,Flavornet
+fenchyl alcohol,1632-73-1,camphor,Flavornet
+ethyl-4-hydroxymethyl- 3(2H)-Furanone,110516-60-4,caramel,Flavornet
+pentyl methylbutyrate,68039-26-9,apple,Flavornet
+α-fenchyl alcohol,14575-74-7,camphor,Flavornet
+α-fenchyl alcohol,14575-74-7,camphor,Flavornet
+menthone,10458-14-7,mint,Flavornet
+β-terpineol,138-87-4,must,Flavornet
+methylcyclopentapyrazine,65128-99-6,roast,Flavornet
+p-2-menthen-1-ol,619-62-5,herb,Flavornet
+(E)-2-nonenal,18829-56-6,"cucumber, fat, green",Flavornet
+3-(acetylthio)-2-methylfuran,55764-25-5,roasted meat,Flavornet
+octyl acetate,2051-50-5,fruit,Flavornet
+sesquiphellandrene,73744-93-1,"sweet, fruit, herb",Flavornet
+citronellal,106-23-0,fat,Flavornet
+2-nonenal,2463-53-8,paper,Flavornet
+nonanol,143-08-8,"fat, green",Flavornet
+"2,6-nonadienal",557-48-2,"cucumber, wax, green",Flavornet
+acetylmethylcyclohexene,70286-20-3,spice,Flavornet
+homofuraneol,27538-10-9,caramel,Flavornet
+diethylmethylpyrazine,18138-05-1,baked,Flavornet
+4-pentenyl isothiocyanate,18060-79-2,"mustard, horseradish",Flavornet
+benzyl acetate,140-11-4,"fresh, boiled vegetable",Flavornet
+diethylmethyl pyrazine,18138-04-0,"potato, meat, roast",Flavornet
+methyldithiofurane,65505-17-1,"thiamin, meat",Flavornet
+methyl-(methyldithio)furan,65505-17-1,"cooked meat, thiamin",Flavornet
+diethyl succinate,123-25-1,"wine, fruit",Flavornet
+"2,6-nonadienol",7786-44-9,cucumber,Flavornet
+nonadienol,28069-72-9,cucumber,Flavornet
+cis-isocitral,72203-97-5,green,Flavornet
+camphene hydrate,465-31-6,camphor,Flavornet
+pinocarveol,4955-29-7,flower,Flavornet
+ethylphenol,620-17-7,must,Flavornet
+l-menthol,2216-51-5,peppermint,Flavornet
+ethylbenzaldehyde,4748-78-1,sweet,Flavornet
+isoborneol,124-76-5,"must, camphor",Flavornet
+butylmethoxypyrazine,24168-70-5,"carrot, earth",Flavornet
+phenylethylthiol,4410-99-5,rubber,Flavornet
+(epoxymethylbutyl)-methylfuran,92356-06-4,"green, earth, citrus",Flavornet
+(Z)-3-hexenyl butanoate,16491-36-4,"wine, green",Flavornet
+ethenyl-ethylmethylpyrazine,181589-32-2,earth,Flavornet
+S-(2-furfuryl)-ethanethioate,13678-68-7,roast,Flavornet
+epoxy-2-octenal,134452-45-2,metal,Flavornet
+methylisoborneol,2371-42-8,"earth, must",Flavornet
+dimethyloctadienal,72203-98-6,green,Flavornet
+hexyl butanoate,2639-63-6,apple peel,Flavornet
+ethyl benzoate,93-89-0,"camomile, flower, celery, fruit",Flavornet
+lavandulol,498-16-8,herb,Flavornet
+dill ether,74410-10-9,dill,Flavornet
+2-nonanol,628-99-9,cucumber,Flavornet
+(Z)-3-hexenyl-2-methylbutanoate,53398-85-9,"herb, sweet",Flavornet
+4-acetyltoluene,122-00-9,bitter almond,Flavornet
+pentylpyridine,2294-76-0,fat,Flavornet
+isobutylmethoxypyrazine,24683-00-9,"earth, spice, green pepper",Flavornet
+butyl hexanoate,626-82-4,fruit,Flavornet
+o-cresol,95-48-7,phenol,Flavornet
+abhexone,698-10-2,spice,Flavornet
+nitro-phenylethane,6125-24-2,"flower, spice",Flavornet
+dihydrocarveol,619-01-2,"mint, spice",Flavornet
+(Z)-dihydrocarvone,3792-53-8,"herb, warm",Flavornet
+"(E,Z)-2,4-nonadienal",21661-99-4,"geranium, pungent",Flavornet
+carveol,99-48-9,"fresh, spearmint, caraway",Flavornet
+borneol,507-70-0,camphor,Flavornet
+ethyl octanoate,106-32-1,"fruit, fat",Flavornet
+1-terpinen-4-ol,562-74-3,"turpentine, nutmeg, must",Flavornet
+neoisomenthol,491-02-1,menthol,Flavornet
+(Z)-4-decenal,21662-09-9,"green, must",Flavornet
+"2,4-nonadienal",6750-03-4,watermelon,Flavornet
+estragole,140-67-0,"licorice, anise",Flavornet
+ethyl octenoate,2351-90-8,"must, oil, fruit, pungent",Flavornet
+(E)-dihydrocarvone,5948-04-9,"warm, herb",Flavornet
+6-decenal,105683-99-6,"tallow, green",Flavornet
+decanal,112-31-2,"soap, orange peel, tallow",Flavornet
+6-decenal,147159-48-6,cucumber,Flavornet
+dimethyl tetrasulfide,5756-24-1,"cabbage, sulfur",Flavornet
+linalool oxide,1365-19-1,"flower, wood",Flavornet
+isodihydrocarveol,18675-35-9,"wood, spice",Flavornet
+naphthalene,91-20-3,tar,Flavornet
+isobutyric acid,79-31-2,"rancid, butter, cheese",Flavornet
+dodecane,112-40-3,alkane,Flavornet
+"2,4-nonadienal",5910-87-2,"fat, wax, green",Flavornet
+p-cymenol,1197-01-9,"citrus, must",Flavornet
+(E)-carveol,1197-07-5,"caraway, solvent",Flavornet
+(Z)-piperitol,491-04-3,herb,Flavornet
+linalyl formate,115-99-1,"citrus, coriander",Flavornet
+methyl nonanoate,1731-84-6,coconut,Flavornet
+(-)-carvone,6485-40-1,mint,Flavornet
+diethyl malonate,105-53-3,apple,Flavornet
+syntexan,67-68-5,garlic,Flavornet
+furfurylmethyldisulphide,57500-00-2,smoke,Flavornet
+(Z)-carveol,1197-06-4,caraway,Flavornet
+myrtenal,23727-16-4,spice,Flavornet
+piperitol,16721-39-4,herb,Flavornet
+methyl salicylate,119-36-8,peppermint,Flavornet
+epoxy-p-menthene,13955-48-1,"mint, dill",Flavornet
+γ-octalactone,104-50-7,coconut,Flavornet
+hexyl methylbutyrate,10032-15-2,strawberry,Flavornet
+benzothiazole,95-16-9,"gasoline, rubber",Flavornet
+phenyl cyanide,100-47-0,rancid,Flavornet
+3-mercaptohexyl-acetate,136954-20-6,box tree,Flavornet
+piperitone,89-81-6,"mint, fresh",Flavornet
+isobornyl formate,1200-67-5,"green, earth, camphor",Flavornet
+citronellol,106-22-9,rose,Flavornet
+dihydromethylcyclopentapyrazine,23747-48-0,"roast, nut",Flavornet
+neral,106-26-3,lemon,Flavornet
+chavicol,501-92-8,"medicine, phenol",Flavornet
+β-cyclocitral,432-25-7,mint,Flavornet
+2-decenal,2497-25-8,tallow,Flavornet
+2-decenal,3913-71-1,orange,Flavornet
+β-phenethyl acetate,103-45-7,"rose, honey, tobacco",Flavornet
+2-decenal,3913-81-3,tallow,Flavornet
+nerol,106-25-2,sweet,Flavornet
+(R)-linden ether,125811-37-2,mint,Flavornet
+ethyl phenylacetate,101-97-3,"fruit, sweet",Flavornet
+hydrocinnamic alcohol,122-97-4,"cinnamon, anise, fruit",Flavornet
+methylnonanedione,113486-29-6,"straw, fruit",Flavornet
+DL-carvone,99-49-0,"mint, basil, fennel",Flavornet
+phenylacetic acid,103-82-2,"honey, flower",Flavornet
+citral,5392-40-5,lemon,Flavornet
+isogeraniol,5944-20-7,rose,Flavornet
+(+)-carvone,2244-16-8,caraway,Flavornet
+bornyl formate,7492-41-3,green,Flavornet
+p-anisyl alcohol,105-13-5,flower,Flavornet
+sulfurol,137-00-8,sulfur,Flavornet
+cumin aldehyde,122-03-2,"acid, sharp",Flavornet
+linalyl acetate,115-95-7,"sweet, fruit",Flavornet
+perilla aldehyde,2111-75-3,spice,Flavornet
+p-anisaldehyde,123-11-5,"mint, sweet",Flavornet
+decanol,112-30-1,fat,Flavornet
+o-aminoacetophenone,551-93-9,"foxy, sweet",Flavornet
+isopulegyl acetate,89-49-6,"mint, leaf",Flavornet
+geranial,141-27-5,"lemon, mint",Flavornet
+geraniol,106-24-1,"rose, geranium",Flavornet
+nonanoic acid,112-05-0,"green, fat",Flavornet
+benzoic acid,65-85-0,urine,Flavornet
+epoxy-2-nonenal,128386-31-2,metal,Flavornet
+octanoic acid,124-07-2,"sweat, cheese",Flavornet
+safrole,94-59-7,"spice, sweet, warm",Flavornet
+p-menthenethiol,71159-90-5,grapefruit,Flavornet
+(E)-cinnamaldehyde,14371-10-9,"cinnamon, paint",Flavornet
+"2,4-decadienal",65909-91-3,seaweed,Flavornet
+4-ethylguaiacol,2785-89-9,"spice, clove",Flavornet
+5-octanolide,698-76-0,peach,Flavornet
+methyl quinoxaline,7251-61-8,"roast, nut, fruit",Flavornet
+indole,120-72-9,"mothball, burnt",Flavornet
+"1,3-p-menthadien-7-al",1197-15-5,"fat, spice",Flavornet
+undecanone,112-12-9,"orange, fresh, green",Flavornet
+decadienal,25152-83-4,"fried, fat",Flavornet
+dihydroterpinyl acetate,58985-18-5,"pine, citrus",Flavornet
+γ-butyrolactone,96-48-0,"caramel, sweet",Flavornet
+(Z)-β-Farnesene,28973-97-9,"citrus, green",Flavornet
+safranal,116-26-7,"herb, sweet",Flavornet
+methyl geranate,1189-09-9,"flower, green, fruit",Flavornet
+nonyl acetate,143-13-5,"sweet, fruit",Flavornet
+decadienal,25152-84-5,"fried, wax, fat",Flavornet
+undecanaldehyde,112-44-7,"oil, pungent, sweet",Flavornet
+α-terpineol,98-55-5,"oil, anise, mint",Flavornet
+ethyl undecanoate,627-90-7,"cognac, coconut",Flavornet
+isopentyldimethylpyrazine,18433-98-2,fruit,Flavornet
+cinnamyl alcohol,104-54-1,oil,Flavornet
+tridecane,629-50-5,alkane,Flavornet
+perillaldehyde,18031-40-8,fat,Flavornet
+(E)-oak lactone,39638-67-0,"coconut, flower",Flavornet
+hydrocinnamic acid,501-52-0,balsamic,Flavornet
+4-hexanolide,695-06-7,"coumarin, sweet",Flavornet
+p-vinylguaiacol,7786-61-0,"clove, curry",Flavornet
+methyl decanoate,110-42-9,wine,Flavornet
+p-mentha-dien-hydroperoxide,32495-14-0,turpentine,Flavornet
+ethylhydroxyhexanoate,2305-25-1,fresh,Flavornet
+dimethoxytoluene,131092-10-9,hummus,Flavornet
+oxodecanal,43160-78-7,fat,Flavornet
+4-methylthiazole,693-95-8,roasted meat,Flavornet
+benzyl butanoate,103-37-7,plum,Flavornet
+dihydrocarvyl acetate,20777-49-5,"mint, camphor, medicine",Flavornet
+δ-muurolene,120021-96-7,oil,Flavornet
+methyl anthranilate,134-20-3,"honey, flower",Flavornet
+p-methoxystyrene,637-69-4,sweet,Flavornet
+p-menthadienhydroperoxide,77026-83-6,turpentine,Flavornet
+heptyl 2-methylbutyrate,50862-12-9,apple,Flavornet
+acetyloxy-dimethylfuranone,4166-20-5,caramel,Flavornet
+cuminic alcohol,536-60-7,"wood, herb",Flavornet
+δ-elemene,20307-84-0,wood,Flavornet
+ethylfuranone,2313-01-1,spice,Flavornet
+butyl benzoate,136-60-7,balsamic,Flavornet
+α-cubebene,17699-14-8,"herb, wax",Flavornet
+2-undecenal,2463-77-6,sweet,Flavornet
+ethyl dihydrocinnamate,2021-28-5,flower,Flavornet
+citronellyl acetate,150-84-5,"rose, dust",Flavornet
+terpinyl acetate,80-26-2,wax,Flavornet
+(E)-2-undecenal,53448-07-0,"soap, fat, green",Flavornet
+neryl acetate,141-12-8,fruit,Flavornet
+vanillin,121-33-5,vanilla,Flavornet
+p-menthadienhydroperoxide,94268-57-2,turpentine,Flavornet
+γ-nonalactone,104-61-0,"coconut, peach",Flavornet
+α-copaene,3856-25-5,"wood, spice",Flavornet
+undecanol,112-42-5,mandarin,Flavornet
+acetylpyrrolizine,55041-85-5,medicine,Flavornet
+decanoic acid,334-48-5,"rancid, fat",Flavornet
+β-damascenone,23726-93-4,"apple. rose, honey",Flavornet
+epoxy-2-decenal,134454-31-2,"metal, green",Flavornet
+(Z)-3-hexenyl hexanoate,31501-11-8,"fruit, prune",Flavornet
+p-menthadienhydroperoxide,77026-84-7,turpentine,Flavornet
+geranyl acetate,105-87-3,rose,Flavornet
+"(E,Z)-3,6-nonadien-1-ol",56805-23-3,fish,Flavornet
+hexyl hexanoate,6378-65-0,"apple peel, peach",Flavornet
+skatole,83-34-1,"mothball, fecal",Flavornet
+butyl octanoate,589-75-3,fruit,Flavornet
+styrene glycol,25779-13-9,sweet,Flavornet
+dehydro-ar-ionene,30364-38-6,licorice,Flavornet
+β-elemene,33880-83-0,"herb, wax, fresh",Flavornet
+isobornyl propionate,2756-56-1,"fruit, turpentine",Flavornet
+ethylfuranone,2407-43-4,spice,Flavornet
+eugenol,97-53-0,"clove, honey",Flavornet
+methylene bis(methyl sulfide),1618-26-4,"garlic, sulfur",Flavornet
+ethyl decanoate,110-38-3,grape,Flavornet
+cis-linalool pyran oxide,14009-71-3,"citrus, green",Flavornet
+methyl eugenol,93-15-2,"clove, spice",Flavornet
+lauric aldehyde,112-54-9,"lily, fat, citrus",Flavornet
+decyl alcohol,112-17-4,"orange, oil",Flavornet
+carvyl acetate,97-42-7,"green, spearmint",Flavornet
+α-gurjunene,489-40-7,"wood, balsamic",Flavornet
+geosmin,19700-21-1,"beet, earth",Flavornet
+(E)-β-damascone,23726-91-2,apple,Flavornet
+tetradecane,629-59-4,alkane,Flavornet
+β-bourbonene,5208-59-3,herb,Flavornet
+(-)-γ-elemene,29873-99-2,"green, wood, oil",Flavornet
+α-ionone,127-41-3,"wood, violet",Flavornet
+(E)-α-bergamotene,13474-59-4,"wood, warm, tea",Flavornet
+β-selinene,17066-67-0,herb,Flavornet
+ethyl salicylate,118-61-6,"wintergreen, mint",Flavornet
+linalyl butyrate,78-36-4,"pear, sweet",Flavornet
+isocaryophyllene,118-65-0,wood,Flavornet
+coumarin,91-64-5,"green, sweet",Flavornet
+γ-decalactone,706-14-9,"peach, fat",Flavornet
+erucin,4430-36-8,cabbage,Flavornet
+geranyl acetone,3796-70-1,"magnolia, green",Flavornet
+α-guaiene,3691-12-1,"wood, balsamic",Flavornet
+β-caryophyllene,87-44-5,"wood, spice",Flavornet
+γ-selinene,515-17-3,wood,Flavornet
+wine lactone,182699-77-0,"coconut, spice",Flavornet
+δ-decalactone,705-86-2,coconut,Flavornet
+isogeraniol,16750-94-0,rose,Flavornet
+2-dodecenal,20407-84-5,"green, fat, sweet",Flavornet
+butyl decanoate,30673-36-0,whiskey,Flavornet
+cinnamic acid,140-10-3,honey,Flavornet
+β-farnesene,18794-84-8,"wood, citrus, sweet",Flavornet
+ethyl cinnamate,103-36-6,"honey, cinnamon",Flavornet
+δ-decalactone,2825-91-4,peach,Flavornet
+aromadendrene,489-39-4,wood,Flavornet
+R-δ-decenolactone,54814-64-1,peach,Flavornet
+linalyl isovalerate,1118-27-0,"sweet, apple, citrus",Flavornet
+asaricin,18607-93-7,"spice, pepper",Flavornet
+"ethyl-(E,Z)-2,4-decadienoate",3025-30-7,pear,Flavornet
+elemicin,487-11-6,"spice, flower",Flavornet
+β-guaiene,88-84-6,"wood, spice",Flavornet
+β-ionone,79-77-6,"seaweed, violet, flower, raspberry",Flavornet
+epoxy-2-undecenal,134346-43-3,metal,Flavornet
+citronellyl isobutyrate,97-89-2,"fruit, rose",Flavornet
+p-coumaric acid,501-98-4,balsamic,Flavornet
+p-menth-1-en-9-yl acetate,28839-13-6,"fruit, herb",Flavornet
+p-menth-1-en-9-ol,18479-68-0,"fruit, herb",Flavornet
+α-humulene,6753-98-6,wood,Flavornet
+valencene,4630-07-3,"green, oil",Flavornet
+bornyl butyrate,13109-70-1,"herb, wood",Flavornet
+undecylic acid,112-37-8,oil,Flavornet
+isopiperitone,58615-39-7,"sweet, fruit",Flavornet
+ethyl laurate,106-33-2,leaf,Flavornet
+α-zingiberene,495-60-3,"spice, fresh, sharp",Flavornet
+alloaromadendrene,25246-27-9,wood,Flavornet
+γ-muurolene,30021-74-0,"herb, wood, spice",Flavornet
+tridecanal,10486-19-8,"flower, sweet, must",Flavornet
+methyl laurate,111-82-0,"fat, coconut",Flavornet
+bis(2-methyl-3-furyl)disulphide,28588-75-2,roasted meat,Flavornet
+raspberry ketone,5471-51-2,raspberry,Flavornet
+pentadecane,629-62-9,alkane,Flavornet
+germacrene D,23986-74-5,"wood, spice",Flavornet
+bicyclogermacrene,24703-35-3,"green, wood",Flavornet
+linalyl valerate,10471-96-2,"citrus, lavender",Flavornet
+α-muurolene,10208-80-7,wood,Flavornet
+berteroin,4430-42-6,cabbage,Flavornet
+3-mercaptohexanol,51755-83-0,sulfur,Flavornet
+citronellyl butyrate,141-16-2,"fruit, sweet, rose",Flavornet
+bornyl isovalerate,76-50-6,"herb, earth, green",Flavornet
+(-)-β-bisabolene,495-61-4,balsamic,Flavornet
+myristicin,607-91-0,"spice, warm, balsamic",Flavornet
+α-farnesene,502-61-4,"wood, sweet",Flavornet
+cadinadiene,29837-12-5,"spice, fruit",Flavornet
+(Z)-oak-lactone,55013-32-6,spice,Flavornet
+γ-cadinene,39029-41-9,wood,Flavornet
+elemol,639-99-6,"green, wood",Flavornet
+δ-cadinene,483-76-1,"thyme, medicine, wood",Flavornet
+geranyl butyrate,106-29-6,"fruit, rose, apple",Flavornet
+α-curcumene,644-30-4,herb,Flavornet
+caryophyllene alcohol,56747-96-7,"moss, earth, spice",Flavornet
+β-sesquiphellandrene,20307-83-9,wood,Flavornet
+germacrene B,15423-57-1,"wood, earth, spice",Flavornet
+(Z)-nerolidol,3790-78-1,wax,Flavornet
+hexyl octanoate,1117-55-1,"herb, green, oil",Flavornet
+calamenene,483-77-2,"herb, spice",Flavornet
+isopropyl benzoate,939-48-0,"sweet, fruit",Flavornet
+12-methyltridecanal,75853-49-5,"cooked meat, tallow, fat, meat broth, sweat",Flavornet
+lauryl alcohol,112-53-8,"fat, wax",Flavornet
+nerolidol,40716-66-3,"wood, flower, wax",Flavornet
+guaiol,489-86-1,"wood, balsamic",Flavornet
+dehydrocarveol,28982-60-7,"oil, herb",Flavornet
+tridecanol,112-70-9,must,Flavornet
+(E)-isoelemicin,5273-85-8,"spice, flower",Flavornet
+dill apiol,484-31-1,"wood, spice",Flavornet
+cedrenol,28231-03-0,fruit,Flavornet
+δ-undecalactone,710-04-3,peach,Flavornet
+geranyl isovalerate,109-20-6,"fruit, rose, apple",Flavornet
+epoxy-β-ionone,23267-57-4,"fruit, sweet, wood",Flavornet
+tetradecyl aldehyde,124-25-4,"flower, wax",Flavornet
+(E)-2-hexenoic acid,13419-69-7,"must, fat",Flavornet
+hexadecane,544-76-3,alkane,Flavornet
+caryophyllene oxide,1139-30-6,"herb, sweet, spice",Flavornet
+spathulenol,6750-60-3,"herb, fruit",Flavornet
+levomenol,23089-26-1,herb,Flavornet
+citronellyl valerate,7540-53-6,"warm, honey, herb, rose",Flavornet
+methyl jasmonate,1211-29-6,jasmine,Flavornet
+(E)-Whiskey lactone,80041-01-6,"flower, lactone",Flavornet
+(Z)-whiskey lactone,80041-00-5,coconut,Flavornet
+β-caryophyllene alcohol,472-97-9,"earth, moss",Flavornet
+humulene oxide,19888-33-6,herb,Flavornet
+(-)-cubenol,21284-22-0,"spice, herb, green tea",Flavornet
+geranyl valerate,10402-47-8,"rose, fruit",Flavornet
+methyl tetradecanoate,124-10-7,orris,Flavornet
+bulnesol,22451-73-6,spice,Flavornet
+β-eudesmol,473-15-4,"wood, green",Flavornet
+(Z)-6-dodecen-γ-lactone,15456-69-6,soap,Flavornet
+methyl epijasmonate,95722-42-2,jasmine,Flavornet
+"cadina-1,4-dien-3-ol",114791-16-1,"wood, spice",Flavornet
+(Z)-6-dodecene-γ-lactone,18679-18-0,"peach, sweet",Flavornet
+α-bisabolol,515-69-5,"spice, flower",Flavornet
+oxo-β-ionone,29790-29-2,wood,Flavornet
+methyl dihydroepijasmonate,39647-11-5,jasmine,Flavornet
+β-bisabolol,15352-77-9,"sweet, herb",Flavornet
+butyl laurate,106-18-3,oil,Flavornet
+δ-cadinol,36564-42-8,herb,Flavornet
+T-muurolol,19912-62-0,"herb, weak spice",Flavornet
+7-methoxycoumarin,531-59-9,"balsamic, sweet",Flavornet
+pantolactone,599-04-2,cotton candy,Flavornet
+γ-dodecalactone,2305-05-7,"sweet, fruit, flower",Flavornet
+zingiberenol,58334-55-7,metal,Flavornet
+"2,6-dimethylnaphthalene",581-42-0,grass,Flavornet
+α-cadinol,481-34-5,"herb, wood",Flavornet
+(E)-2-dodecen-1-ol,69064-37-5,oil,Flavornet
+7-heptadecene,54290-12-9,alkane,Flavornet
+ethyl tetradecanoate,124-06-1,ether,Flavornet
+β-farnesol,58181-76-3,"flower, oil",Flavornet
+α-caryophyllene alcohol,4586-22-5,earth,Flavornet
+methyl cinnamate,1754-62-7,strawberry,Flavornet
+diethyl malate,7554-12-3,"brown sugar, sweet",Flavornet
+β-sinensal,60066-88-8,sweet,Flavornet
+pentadecanal,2765-11-9,fresh,Flavornet
+heptadecane,629-78-7,alkane,Flavornet
+δ-dodecalactone,713-95-1,"fruit, sweet",Flavornet
+(E)-farnesol,106-28-5,muguet,Flavornet
+ethyl-(E)-cinnamate,4192-77-2,"flower, honey",Flavornet
+viridiflorol,552-02-3,"green, sweet",Flavornet
+trimethylphenylbutenone,57461-21-9,"flower, green",Flavornet
+benzyl benzoate,120-51-4,"balsamic, oil, herb",Flavornet
+methyl furaneol,27538-09-6,"cotton candy, sweet",Flavornet
+bornyl benzoate,26927-90-2,"pine, balsamic",Flavornet
+perhydrofarnesylacetone,502-69-2,fat,Flavornet
+10-epi-γ-eudesmol,15051-81-7,"sweet, wood, flower",Flavornet
+(+)-nootkatone,4674-50-4,grapefruit,Flavornet
+hexadecanone,18787-63-8,fruit,Flavornet
+4-propyl-guaiacol,2785-87-7,phenol,Flavornet
+palmitaldehyde,629-80-1,cardboard,Flavornet
+(-)-nootkatone,38427-78-0,terpentine,Flavornet
+octadecane,593-45-3,alkane,Flavornet
+Diethyl 2-hydroxyglutarate,69134-53-8,cotton candy,Flavornet
+uncineol,1209-71-8,"wax, sweet",Flavornet
+phenylethyl benzoate,97-47-3,"flower, honey",Flavornet
+p-hydroethylbenzene,123-07-9,"phenol, spice",Flavornet
+α-calacorene,21391-99-1,wood,Flavornet
+hexadecanol,29354-98-1,"flower, wax",Flavornet
+cetyl alcohol,36653-82-4,"wax, flower",Flavornet
+4-Carbethoxybutyrolactone,1126-51-8,"roast, smoke",Flavornet
+eudesmol,123123-38-6,"sweet, wood",Flavornet
+ethyl hexadecanoate,628-97-7,wax,Flavornet
+isoeugenol,97-54-1,flower,Flavornet
+nonadecane,629-92-5,alkane,Flavornet
+γ-undecalactone,104-67-6,apricot,Flavornet
+"(E,E)-farnesyl acetate",4128-17-0,"oil, wax",Flavornet
+trimethylphenylbutenone,81018-77-1,"flower, green",Flavornet
+syringol,91-10-1,"medicine, phenol, smoke",Flavornet
+isopropyl palmitate,142-91-6,fat,Flavornet
+diethyl tartrate,87-91-2,"earth, must",Flavornet
+"(E,E)-farnesylacetone",1117-52-8,"flower, ether",Flavornet
+eicosane,112-95-8,alkane,Flavornet
+(E)-isoeugenol,5932-68-3,flower,Flavornet
+octadecanaldehyde,638-66-4,oil,Flavornet
+4-vinylphenol,2628-17-3,almond shell,Flavornet
+oleic acid,112-80-1,fat,Flavornet
+methyl octadecenoate,112-61-8,fat,Flavornet
+hydroxycalamenene,95908-33-1,herb,Flavornet
+tetradecanol,112-72-1,coconut,Flavornet
+heneicosane,629-94-7,alkane,Flavornet
+phytol,150-86-7,flower,Flavornet
+5-oxymethylfurfurole,67-47-0,cardboard,Flavornet
+lauric acid,143-07-7,metal,Flavornet
+docosane,629-97-0,alkane,Flavornet
+6-Methoxyeugenol,6627-88-9,"sweet, flower",Flavornet
+stearyl alcohol,112-92-5,oil,Flavornet
+methyl vanillate,3943-74-6,"caramel, butterscotch, vanilla",Flavornet
+ethyl vanillate,617-05-0,"flower, fruit, sweet, vanilla",Flavornet
+acetovanillone,498-02-2,vanilla,Flavornet
+3-oxo-α-ionol,34318-21-3,spice,Flavornet
+tricosane,638-67-5,alkane,Flavornet

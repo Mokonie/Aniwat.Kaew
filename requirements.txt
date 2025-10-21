@@ -4,7 +4,4 @@ plotly
 scikit-learn
 xlsxwriter
 kaleido
-wordcloud
-matplotlib
 numpy
-

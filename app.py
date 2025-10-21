@@ -1,6 +1,6 @@
 # ==============================================================================
 # GC-MS Data Comparator & Flavor Explorer
-# Complete Version with Integrated Flavor Database
+# Complete Version with Integrated Flavor Database (No Word Cloud)
 # Created by Aniwat Kaewkrod
 # ==============================================================================
 
@@ -22,76 +22,112 @@ from sklearn.decomposition import PCA
 @st.cache_data
 def get_flavor_database():
     """
-    อ่านและโหลดฐานข้อมูลกลิ่นจากไฟล์ flavor_descriptive_master.csv
-    ฐานข้อมูลนี้รวบรวมจาก 3 แหล่งหลัก:
-    - FlavorDB
-    - FlavorNet  
-    - แหล่งอื่นๆ
-    รวมทั้งหมด 30,714 สารประกอบ
+    อ่านและโหลดฐานข้อมูลกลิ่นจากไฟล์ทั้ง 3 แหล่ง:
+    1. flavordb_descriptive.csv (25,354 สาร)
+    2. flavornet_descriptive.csv (738 สาร)
+    3. flavornet_flavor_descriptive.csv (738 สาร + RI values)
+    
+    รวมทั้งหมด ~26,000 สารประกอบ (หลังจากลบซ้ำ)
     """
     try:
-        # ลำดับความสำคัญของไฟล์ที่จะค้นหา
-        possible_files = [
-            'flavor_descriptive_master.csv',
-            'flavordb_descriptive.csv',
-            'flavornet_descriptive.csv'
+        all_dfs = []
+        file_stats = []
+        
+        # ไฟล์ที่จะพยายามโหลด
+        flavor_files = [
+            {
+                'path': 'flavordb_descriptive.csv',
+                'columns': ['id', 'compound_name', 'smiles', 'flavor_description', 'source'],
+                'use_cols': [1, 3, 4]  # compound_name, flavor_description, source
+            },
+            {
+                'path': 'flavornet_descriptive.csv',
+                'columns': ['compound_name', 'cas', 'flavor_description', 'source'],
+                'use_cols': [0, 2, 3]  # compound_name, flavor_description, source
+            },
+            {
+                'path': 'flavornet_flavor_descriptive.csv',
+                'columns': ['compound_name', 'cas', 'flavor_description', 'ri1', 'ri2', 'ri3', 'ri4'],
+                'use_cols': [0, 2]  # compound_name, flavor_description (ไม่เอา RI values)
+            }
         ]
         
-        db_file = None
-        for filename in possible_files:
-            if os.path.exists(filename):
-                db_file = filename
-                st.info(f"✅ พบไฟล์ฐานข้อมูลกลิ่น: {filename}")
-                break
+        for file_info in flavor_files:
+            file_path = file_info['path']
+            
+            if os.path.exists(file_path):
+                try:
+                    # อ่านไฟล์
+                    df = pd.read_csv(file_path, encoding='utf-8', on_bad_lines='skip')
+                    
+                    # ตรวจสอบจำนวนคอลัมน์
+                    if len(df.columns) < 3:
+                        continue
+                    
+                    # เลือกคอลัมน์ที่ต้องการ
+                    if file_path == 'flavordb_descriptive.csv':
+                        # รูปแบบ: id, compound_name, smiles, flavor_description, source
+                        df = df.iloc[:, [1, 3, 4]]  # compound_name, flavor_description, source
+                        df.columns = ['Compound', 'Flavor_Descriptor', 'Source']
+                        
+                    elif file_path == 'flavornet_descriptive.csv':
+                        # รูปแบบ: compound_name, cas, flavor_description, source
+                        df = df.iloc[:, [0, 2, 3]]  # compound_name, flavor_description, source
+                        df.columns = ['Compound', 'Flavor_Descriptor', 'Source']
+                        
+                    elif file_path == 'flavornet_flavor_descriptive.csv':
+                        # รูปแบบ: compound_name, cas, flavor_description, ri1, ri2, ri3, ri4
+                        df = df.iloc[:, [0, 2]]  # compound_name, flavor_description
+                        df.columns = ['Compound', 'Flavor_Descriptor']
+                        df['Source'] = 'FlavorNet_RI'
+                    
+                    # ทำความสะอาดข้อมูล
+                    df.dropna(subset=['Compound', 'Flavor_Descriptor'], inplace=True)
+                    df['Compound'] = df['Compound'].astype(str).str.strip()
+                    df['Flavor_Descriptor'] = df['Flavor_Descriptor'].astype(str).str.strip()
+                    
+                    # ลบข้อมูลที่ไม่ถูกต้อง
+                    df = df[df['Compound'].str.len() > 2]
+                    df = df[df['Flavor_Descriptor'].str.len() > 2]
+                    
+                    # เก็บสถิติ
+                    file_stats.append({
+                        'file': file_path,
+                        'count': len(df)
+                    })
+                    
+                    all_dfs.append(df)
+                    
+                except Exception as e:
+                    st.warning(f"⚠️ ไม่สามารถอ่านไฟล์ {file_path}: {e}")
+                    continue
         
-        if db_file is None:
+        if not all_dfs:
             st.warning("⚠️ ไม่พบไฟล์ฐานข้อมูลกลิ่น - ฟีเจอร์ Flavor Profile และ Flavor Explorer จะไม่สามารถใช้งานได้")
-            return pd.DataFrame(columns=['Compound', 'Flavor_Descriptor'])
-
-        # อ่านไฟล์ CSV
-        df = pd.read_csv(db_file, encoding='utf-8', on_bad_lines='skip')
+            return pd.DataFrame(columns=['Compound', 'Flavor_Descriptor', 'Source'])
         
-        # ตรวจสอบและปรับโครงสร้างให้เป็นมาตรฐาน
-        if len(df.columns) >= 3:
-            # รูปแบบ: compound_name, smiles, flavor_description, source
-            # หรือ: id, compound_name, smiles, flavor_description, source
-            if df.columns[0].lower() in ['id', 'index']:
-                # มี ID column ให้ข้าม
-                df.columns = ['ID', 'Compound', 'SMILES', 'Flavor_Descriptor'] + list(df.columns[4:])
-            else:
-                df.columns = ['Compound', 'SMILES', 'Flavor_Descriptor'] + list(df.columns[3:])
-        else:
-            st.error("❌ ไฟล์ฐานข้อมูลกลิ่นมีโครงสร้างไม่ถูกต้อง")
-            return pd.DataFrame(columns=['Compound', 'Flavor_Descriptor'])
-
-        # เลือกเฉพาะคอลัมน์ที่จำเป็น
-        df = df[['Compound', 'Flavor_Descriptor']].copy()
+        # รวมข้อมูลทั้งหมด
+        combined_df = pd.concat(all_dfs, ignore_index=True)
         
-        # ทำความสะอาดข้อมูล
-        df.dropna(subset=['Compound', 'Flavor_Descriptor'], inplace=True)
-        df['Compound'] = df['Compound'].astype(str).str.strip()
-        df['Flavor_Descriptor'] = df['Flavor_Descriptor'].astype(str).str.strip()
+        # ทำให้ชื่อสารเป็น Title Case
+        combined_df['Compound'] = combined_df['Compound'].str.title()
         
-        # ลบข้อมูลว่างหรือไม่ถูกต้อง
-        df = df[df['Compound'].str.len() > 2]
-        df = df[df['Flavor_Descriptor'].str.len() > 2]
+        # ลบข้อมูลซ้ำ (เก็บตัวแรก - จาก FlavorDB ซึ่งมีข้อมูลครบที่สุด)
+        combined_df = combined_df.drop_duplicates(subset=['Compound'], keep='first')
         
-        # ทำให้ชื่อสารเป็น Title Case เพื่อให้ตรงกับข้อมูลจาก GC-MS
-        df['Compound'] = df['Compound'].str.title()
+        # แสดงสถิติ
+        st.success(f"✅ โหลดฐานข้อมูลกลิ่นสำเร็จ: {len(combined_df):,} สารประกอบ")
         
-        # ลบข้อมูลซ้ำ (เก็บตัวแรก)
-        df = df.drop_duplicates(subset=['Compound'], keep='first')
+        with st.expander("📊 รายละเอียดฐานข้อมูล"):
+            for stat in file_stats:
+                st.write(f"- **{stat['file']}**: {stat['count']:,} สาร")
+            st.write(f"- **รวมทั้งหมด (หลังลบซ้ำ)**: {len(combined_df):,} สาร")
         
-        st.success(f"✅ โหลดฐานข้อมูลกลิ่นสำเร็จ: {len(df):,} สารประกอบ")
+        return combined_df
         
-        return df
-        
-    except FileNotFoundError:
-        st.warning("⚠️ ไม่พบไฟล์ฐานข้อมูลกลิ่น - กรุณาวางไฟล์ 'flavor_descriptive_master.csv' ในโฟลเดอร์เดียวกับ app.py")
-        return pd.DataFrame(columns=['Compound', 'Flavor_Descriptor'])
     except Exception as e:
         st.error(f"❌ เกิดข้อผิดพลาดในการอ่านไฟล์ฐานข้อมูลกลิ่น: {e}")
-        return pd.DataFrame(columns=['Compound', 'Flavor_Descriptor'])
+        return pd.DataFrame(columns=['Compound', 'Flavor_Descriptor', 'Source'])
 
 # ==============================================================================
 # ส่วนที่ 2: ฟังก์ชันประมวลผลข้อมูล GC-MS
@@ -602,12 +638,12 @@ if st.session_state.analysis_complete and st.session_state.uploaded_files_list:
                 st.error(f"❌ เกิดข้อผิดพลาดในการคำนวณ PCA: {e}")
 
     # ==============================================================================
-    # แท็บที่ 3: Flavor Profile
+    # แท็บที่ 3: Flavor Profile (แสดงเป็นตาราง ไม่มี Word Cloud)
     # ==============================================================================
     
     with tabs[2]:
         st.header("👃 สรุปโปรไฟล์กลิ่น")
-        st.info("💡 แสดงคำอธิบายกลิ่นของสารประกอบที่ตรวจพบ โดยอ้างอิงจากฐานข้อมูล 30,714 สารประกอบ")
+        st.info("💡 แสดงคำอธิบายกลิ่นของสารประกอบที่ตรวจพบ โดยอ้างอิงจากฐานข้อมูล 3 แหล่งหลัก")
         
         # โหลดฐานข้อมูลกลิ่น
         df_flavor_db = get_flavor_database()
@@ -634,48 +670,43 @@ if st.session_state.analysis_complete and st.session_state.uploaded_files_list:
             if not compounds_with_flavor.empty:
                 st.markdown("---")
                 st.subheader("📋 สารประกอบที่มีข้อมูลกลิ่น")
+                
+                # แสดงตารางพร้อมคอลัมน์ Source
                 st.dataframe(
-                    compounds_with_flavor, 
+                    compounds_with_flavor[['Compound', 'Flavor_Descriptor', 'Source']], 
                     use_container_width=True, 
-                    hide_index=True
+                    hide_index=True,
+                    column_config={
+                        "Compound": "ชื่อสาร",
+                        "Flavor_Descriptor": "คำอธิบายกลิ่น",
+                        "Source": "แหล่งข้อมูล"
+                    }
                 )
                 
-                # Word Cloud
+                # สถิติตามแหล่งข้อมูล
                 st.markdown("---")
-                st.subheader("☁️ Flavor Word Cloud")
+                st.subheader("📊 สถิติตามแหล่งข้อมูล")
                 
-                try:
-                    from wordcloud import WordCloud
-                    import matplotlib.pyplot as plt
-
-                    # รวมคำอธิบายกลิ่นทั้งหมด
-                    all_flavors = ' '.join(
-                        compounds_with_flavor['Flavor_Descriptor']
-                        .str.replace(',', ' ')
-                        .str.replace(';', ' ')
-                    )
-                    
-                    # สร้าง Word Cloud
-                    wordcloud = WordCloud(
-                        width=1000, 
-                        height=500, 
-                        background_color='white', 
-                        colormap='viridis',
-                        max_words=150,
-                        relative_scaling=0.5
-                    ).generate(all_flavors)
-                    
-                    fig_wc, ax = plt.subplots(figsize=(12, 6))
-                    ax.imshow(wordcloud, interpolation='bilinear')
-                    ax.axis('off')
-                    st.pyplot(fig_wc)
-                    
-                    st.caption("ขนาดของคำแสดงถึงความถี่ของกลิ่นที่ปรากฏในสารประกอบที่พบ")
-                    
-                except ImportError:
-                    st.warning("⚠️ ต้องติดตั้ง `wordcloud` และ `matplotlib` เพื่อแสดง Word Cloud")
-                except Exception as e:
-                    st.error(f"❌ ไม่สามารถสร้าง Word Cloud: {e}")
+                source_counts = compounds_with_flavor['Source'].value_counts()
+                
+                col_src1, col_src2, col_src3 = st.columns(3)
+                
+                flavordb_count = source_counts.get('FlavorDB', 0)
+                flavornet_count = source_counts.get('Flavornet', 0)
+                flavornet_ri_count = source_counts.get('FlavorNet_RI', 0)
+                
+                col_src1.metric("🔬 FlavorDB", f"{flavordb_count} สาร")
+                col_src2.metric("🌿 FlavorNet", f"{flavornet_count} สาร")
+                col_src3.metric("📐 FlavorNet (RI)", f"{flavornet_ri_count} สาร")
+                
+                # Export ตาราง
+                st.markdown("---")
+                st.download_button(
+                    "📥 Download Flavor Profile (XLSX)",
+                    to_excel(compounds_with_flavor),
+                    "flavor_profile.xlsx",
+                    help="ดาวน์โหลดข้อมูลกลิ่นทั้งหมดในรูปแบบ Excel"
+                )
                     
             else:
                 st.warning("⚠️ ไม่พบสารประกอบใดๆ ที่มีข้อมูลกลิ่นในฐานข้อมูล")
@@ -729,8 +760,11 @@ if st.session_state.analysis_complete and st.session_state.uploaded_files_list:
                         
                         # แสดงตาราง
                         st.dataframe(
-                            found_compounds,
+                            found_compounds[['Compound', 'Flavor_Descriptor', 'Source', 'Found_In_Samples']],
                             column_config={
+                                "Compound": "ชื่อสาร",
+                                "Flavor_Descriptor": "คำอธิบายกลิ่น",
+                                "Source": "แหล่งข้อมูล",
                                 "Found_In_Samples": st.column_config.CheckboxColumn(
                                     "✓ พบในตัวอย่าง?",
                                     help="สารนี้ถูกตรวจพบในตัวอย่างที่คุณอัปโหลดหรือไม่"
@@ -853,7 +887,7 @@ if st.session_state.analysis_complete and st.session_state.uploaded_files_list:
 st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: gray; font-size: 12px;'>
-    <p>GC-MS Data Comparator & Flavor Explorer v2.0</p>
+    <p>GC-MS Data Comparator & Flavor Explorer v2.1</p>
     <p>Powered by Streamlit | Created by Aniwat Kaewkrod</p>
 </div>
 """, unsafe_allow_html=True)
